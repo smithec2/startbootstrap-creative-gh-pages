@@ -19,14 +19,16 @@
 
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.min.css" rel="stylesheet">
 
   <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
 
-
+  <!-- Addtional Styles -->
+  <link href="css/additional-styles.css" rel="stylesheet">
+  
   <style>
     .datepicker {z-index: 1151 !important;}
   </style>
@@ -105,15 +107,13 @@
             <div class="form-group">
               <label for="date" class="col-form-label">Date:</label>
               <input id="date" type="text" class="form-control datepicker">
-
-
-<!--              <textarea class="form-control" id="message-text"></textarea>-->
+              <!--<textarea class="form-control" id="message-text"></textarea>-->
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" >Add</button>
+          <button type="button" class="btn btn-primary" >Add Ski Class</button>
         </div>
       </div>
     </div>
@@ -127,9 +127,6 @@
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">Your Schedule!</h2>
           <hr class="divider light my-4">
-
-
-
 
           <div id="users-contain" class="ui-widget">`
             <table id="users" class="ui-widget ui-widget-content">
@@ -148,26 +145,25 @@
                 <td>Adult Ski</td>
                 <td>3/15/2020</td>
                 <td>10:00 AM</td>
-                <td>delete</td>
+                <td><a class="link-delete" href="#"><i class="fa fa-fw fa-trash"></i>delete</a></td>
               </tr>
               <tr>
                 <td>Adult Ski</td>
                 <td>3/17/2020</td>
                 <td>10:00 AM</td>
-                <td>delete</td>
+                <td><a class="link-delete" href="#"><i class="fa fa-fw fa-trash"></i>delete</a></td>
               </tr>
               <tr>
                 <td>Adult Ski</td>
                 <td>3/19/2020</td>
                 <td>10:00 AM</td>
-                <td>delete</td>
-
+                <td><a class="link-delete" href="#"><i class="fa fa-fw fa-trash"></i>delete</a></td>
               </tr>
               </tbody>
             </table>
           </div>
 
-          <p class="text-white-50 mb-4">Currently you have no classes scheduled. Click the add class button to get started.</p>
+          <!-- <p class="text-white-50 mb-4">Currently you have no classes scheduled. Click the add class button to get started.</p> -->
           <a class="btn btn-light btn-xl js-scroll-trigger" data-toggle="modal" data-target="#exampleModal" data-whatever="Craig Smith">Add Class</a>
         </div>
       </div>

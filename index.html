@@ -66,7 +66,7 @@
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">Use this application to manage your ski lessons. You can view add and remove ski school classes </p>
+          <p class="text-white-75 font-weight-light mb-5">Use this application to manage your ski lessons. You can view add and remove ski school classes.</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Schedule Lessons</a>
         </div>
       </div>
@@ -85,35 +85,19 @@
         </div>
         <div class="modal-body">
           <form>
-<!--            <div class="form-group">-->
-<!--              <label for="recipient-name" class="col-form-label">Name:</label>-->
-<!--              <input type="text" class="form-control" id="recipient-name">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--              <label for="recipient-name" class="col-form-label">Class:</label>-->
-<!--              <select class="form-control" id="class-name">-->
-<!--                <option value="volvo">Adult Ski Reservation</option>-->
-<!--                <option value="saab">Adult Snowboard Reservation</option>-->
-<!--                <option value="opel">Youth Ski Reservation (7-12)</option>-->
-<!--                <option value="audi">Youth Snowboard Reservation (7-12)</option>-->
-<!--                <option value="audi">Child Ski Reservation (4-6)</option>-->
-<!--                <option value="audi">Child Snowboard Reservation (4-6)</option>-->
-<!--              </select>-->
-
-<!--            </div>-->
             <div>
               <label>Select date for Adult Ski Reservation</label>
             </div>
             <div class="form-group">
               <label for="date" class="col-form-label">Date:</label>
               <input id="date" type="text" class="form-control datepicker">
-              <!--<textarea class="form-control" id="message-text"></textarea>-->
+              <span id="tips" class="text-danger"></span>
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" >Add Ski Class</button>
+          <button id="addClass" type="button" class="btn btn-primary" >Add Ski Class</button>
         </div>
       </div>
     </div>
@@ -127,43 +111,39 @@
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">Your Schedule!</h2>
           <hr class="divider light my-4">
-
-          <div id="users-contain" class="ui-widget">`
-            <table id="users" class="ui-widget ui-widget-content">
-              <thead>
-              <tr class="ui-widget-header ">
-                <th>Class</th>
-                <th>
-                  Date
-                </th>
-                <th>Start Time</th>
-                <th></th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>Adult Ski</td>
-                <td>3/15/2020</td>
-                <td>10:00 AM</td>
-                <td><a class="link-delete" href="#"><i class="fa fa-fw fa-trash"></i><span>delete</span></a></td>
-              </tr>
-              <tr>
-                <td>Adult Ski</td>
-                <td>3/17/2020</td>
-                <td>10:00 AM</td>
-                <td><a class="link-delete" href="#"><i class="fa fa-fw fa-trash"></i><span>delete</span></a></td>
-              </tr>
-              <tr>
-                <td>Adult Ski</td>
-                <td>3/19/2020</td>
-                <td>10:00 AM</td>
-                <td><a class="link-delete" href="#"><i class="fa fa-fw fa-trash"></i><span>delete</span></a></td>
-              </tr>
-              </tbody>
-            </table>
+          <div class="show-table ">
+            <div id="users-contain" class="ui-widget">`
+              <table id="users" class="ui-widget ui-widget-content">
+                <thead>
+                <tr class="ui-widget-header ">
+                  <th>Class</th>
+                  <th>
+                    Date
+                  </th>
+                  <th>Start Time</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Adult Ski</td>
+                  <td>3/15/2020</td>
+                  <td>10:00 AM</td>
+                  <td><a class="link-delete" href="#"><i class="fa fa-fw fa-trash"></i><span>delete</span></a></td>
+                </tr>
+                <tr>
+                  <td>Adult Ski</td>
+                  <td>3/19/2020</td>
+                  <td>10:00 AM</td>
+                  <td><a class="link-delete" href="#"><i class="fa fa-fw fa-trash"></i><span>delete</span></a></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-
-          <!-- <p class="text-white-50 mb-4">Currently you have no classes scheduled. Click the add class button to get started.</p> -->
+          <div class="no-show-table">
+          <p class="text-white-50 mb-4">Currently you have no classes scheduled. Click the add class button to get started.</p>
+          </div>
           <a class="btn btn-light btn-xl js-scroll-trigger" data-toggle="modal" data-target="#exampleModal" data-whatever="Craig Smith">Add Class</a>
         </div>
       </div>
@@ -218,7 +198,6 @@
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
           <div>3925 East Snowbasin Road<br/> Huntsville Utah 84317</div>
         </div>
       </div>

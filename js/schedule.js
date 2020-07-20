@@ -1,3 +1,8 @@
 $(document).ready(function() {
-  $('#schedule').DataTable();
+  $('#schedule').DataTable( {
+    dom: 'Bfrtip',
+    buttons: [
+      'copy', 'csv', 'excel', 'pdf', 'print'
+    ]
+  } );
 } );
